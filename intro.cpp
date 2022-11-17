@@ -14,12 +14,12 @@ int main(){
     ytChannel.Ownername="Zebra";
     ytChannel.Subscriberscount=1400;
     ytChannel.PublishedVideoTitles={"c", "C++", "Java"};
-    cout<<"Name"<<ytChannel.Name<<endl;
-    cout<<"Ownername"<<ytChannel.Ownername<<endl;
-    cout<<"Subscribers Count"<<ytChannel.Subscriberscount<<endl;
+    cout<<"Name "<<ytChannel.Name<<endl;
+    cout<<"Ownername "<<ytChannel.Ownername<<endl;
+    cout<<"Subscribers Count "<<ytChannel.Subscriberscount<<endl;
     cout<<"Video"<<endl;
-    for(string ytChannel.PublishedVideoTitles;){
+    /*for(string ytChannel.PublishedVideoTitles;){
     cout<<ytChannel.PublishedVideoTitles<<endl;
-    }
+    }*/
     system("pause>0");
 }
