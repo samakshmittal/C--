@@ -9,7 +9,7 @@ void test(int i) {
         void test(char const *ch) {
             cout << " The char* is " << ch << endl;
             }
-            int main() {
+int main() {
                 test(5);
                 test(5.5);
                 test("five");
