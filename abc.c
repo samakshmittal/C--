@@ -106,6 +106,7 @@ void displayrecord()
     }
 }
 
+// Function to show sum of salary
 void sum(){
     system("cls");
     float s=0;
@@ -121,6 +122,7 @@ void sum(){
     system("pause");
 }
 
+// Function to display all the records
 void displayallrecord()
 {
     system("cls");
@@ -144,8 +146,6 @@ void displayallrecord()
     printf("\n\n\n\t");
     system("pause");
 }
-
-
 
 // Function to delete the records of individual
 void deleterecord()
@@ -184,49 +184,6 @@ void deleterecord()
     }
 }
   
-/*
-// Function to modify the record
-void modifyrecord()
-{
-    system("cls");
-    char empname[50];
-    char another = 'y';
-  
-    while (another == 'y') {
-        printf("\nEnter employee name"
-               " to modify : ");
-        scanf("%s", empname);
-  
-        rewind(fp);
-  
-        // While File is open
-        while (fread(&e, size, 1, fp) == 1) {
-            // Compare the employee name
-            // with ename
-            if (strcmp(e.name, empname) == 0) {
-                printf("\nEnter new name:");
-                scanf("%s", e.name);
-                printf("\nEnter new age :");
-                scanf("%d", &e.age);
-                printf("\nEnter new salary :");
-                scanf("%f", &e.salary);
-                printf("\nEnter new EMP-ID :");
-                scanf("%d", &e.id);
-  
-                fseek(fp, -size, SEEK_CUR);
-                fwrite(&e, size, 1, fp);
-                break;
-            }
-        }
-  
-        // Ask for modifying another record
-        printf("\nWant to modify another"
-               " record (Y/N) :");
-        fflush(stdin);
-        scanf("%c", &another);
-    }
-}
- */ 
 // Driver code
 int main()
 {
@@ -279,13 +236,13 @@ int main()
         gotoxy(30, 10);
         printf("\n1. ADD RECORD\n");
         gotoxy(30, 12);
-        printf("\n2. DELETE RECORD\n");
+        printf("\n2. SUM OF SALARY\n");
         gotoxy(30, 14);
-        printf("\n3. DISPLAY RECORDS\n");
+        printf("\n3. DISPLAY THE RECORD OF AN INDIVIDUAL\n");
         gotoxy(30, 16);
         printf("\n4. DISPLAY ALL THE RECORDS\n");
         gotoxy(30, 18);
-        printf("\n5. SUM OF SALARY\n");
+        printf("\n5. DELETE THE RECORD OF AN INDIVIDUAL\n");
         gotoxy(30, 20);
         printf("\n6. EXIT\n");
         gotoxy(30, 22);
@@ -303,26 +260,26 @@ int main()
   
         case 2:
   
-            // Delete the records
-            deleterecord();
+            // Delete the sum
+            sum();
             break;
   
         case 3:
   
-            // Display the records
+            // Display the record of an individual
             displayrecord();
             break;
   
         case 4:
   
-            // Modify the records
+            // Display all the records
             displayallrecord();
             break;
   
         case 5:
   
-            // Modify the records
-            sum();
+            // Delete the record of an individual
+            deleterecord();
             break;
 
         case 6:
