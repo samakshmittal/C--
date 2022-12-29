@@ -1,12 +1,20 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
-#include <thread>
 using namespace std;
-void threadfn(){
-    cout<<"Inside thread"<<endl;
-}
-int main(){
-    thread t1(threadfn);
-    t1.join();
-    return 0;
-}
+class Mammal {
+    public:
+    void eat() 
+    {
+        cout << "Mammals eat...";
+        }
+        };
+        class Cow: public Mammal {
+            public:
+            void eat() {
+                cout << "Cows eat grass...";
+                }
+                };
+                int main(void) {
+                    Cow c = Cow();
+                    c.eat();
+                    return 0;
+                }
